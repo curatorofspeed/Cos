@@ -104,7 +104,9 @@ section{padding:clamp(50px,8vw,92px) 0;border-top:1px solid var(--rule)}
 .clock .go-live{margin-top:16px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ember)}
 
 /* feature grid */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+@media(min-width:560px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
 .grid>div{background:var(--carbon);padding:24px 22px 28px}
 .grid .n{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--ember);text-transform:uppercase}
 .grid h3{margin:13px 0 8px;font-size:18px;font-weight:700;font-variation-settings:'wdth' 104,'wght' 700}
@@ -146,7 +148,7 @@ footer{border-top:1px solid var(--rule);padding:26px 0 40px}
 
 <div class="wrap">
   <nav>
-    <div class="mark">CURATORS OF SPEED <b>LLC</b></div>
+    <div class="mark">CURATORS <b>OF</b> SPEED</div>
     <div class="nav-links">
       <a href="#hunt">The app</a>
       <a href="#inside">Inside</a>
@@ -158,7 +160,7 @@ footer{border-top:1px solid var(--rule);padding:26px 0 40px}
 
 <main>
   <header class="hero wrap">
-    <div class="eyebrow"><i></i> Washington LLC · Makers of Tyre Hunt · Est. 2026</div>
+    <div class="eyebrow"><i></i> Makers of Tyre Hunt · Est. 2026</div>
     <h1><span>Curators</span><span class="of">of</span><span>Speed</span></h1>
     <div class="beam"></div>
     <p class="lede">A small team of gearheads building one thing: <strong>Tyre Hunt</strong> — the camera-first car spotting game. Find it in the wild, shoot it, keep it forever.</p>
