@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curators of Speed LLC — makers of Tyre Hunt</title>
+<meta name="description" content="Curators of Speed LLC is a small team of gearheads building Tyre Hunt — a camera-first car spotting game. Launching at Monterey Car Week.">
+<meta property="og:title" content="Curators of Speed LLC — makers of Tyre Hunt">
+<meta property="og:description" content="A small team of gearheads building Tyre Hunt. Spot it. Own the shot.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://curatorsofspeed.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230B0B0D'/><rect x='4' y='14' width='24' height='3' fill='%23FF4A17'/><rect x='4' y='20' width='14' height='3' fill='%23D9A441'/></svg>">
+<style>
+:root{
+  --carbon:#0B0B0D;
+  --graphite:#131418;
+  --bone:#EDEAE4;
+  --ash:#8B8E96;
+  --ember:#FF4A17;
+  --gold:#D9A441;
+  --rule:rgba(237,234,228,.12);
+  --display:'Archivo',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --gut:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--carbon);color:var(--bone);font-family:var(--display);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(120% 80% at 50% -10%, rgba(255,74,23,.10), transparent 60%),
+    repeating-linear-gradient(180deg, rgba(255,255,255,.014) 0 1px, transparent 1px 4px);
+}
+main,header,footer,nav{position:relative;z-index:1}
+a{color:inherit}
+::selection{background:var(--ember);color:#fff}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.strip{height:10px;background:repeating-linear-gradient(90deg,var(--rule) 0 1px,transparent 1px 14px);border-bottom:1px solid var(--rule)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 var(--gut)}
+
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0}
+.mark{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+.mark b{color:var(--ember)}
+.nav-links{display:flex;gap:22px;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.nav-links a{color:var(--ash);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--bone)}
+.nav-links a.on{color:var(--ember)}
+@media(max-width:620px){.nav-links a:not(.on){display:none}}
+
+/* hero */
+.hero{padding:clamp(44px,9vw,96px) 0 clamp(36px,6vw,64px)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ash);display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:22px}
+.eyebrow i{width:22px;height:1px;background:var(--ember);display:inline-block;font-style:normal}
+h1{margin:0;font-size:clamp(46px,12.5vw,146px);line-height:.86;font-weight:900;font-variation-settings:'wdth' 112,'wght' 900;letter-spacing:-.02em;text-transform:uppercase}
+h1 span{display:block}
+h1 .of{font-weight:400;font-variation-settings:'wdth' 66,'wght' 400;color:var(--ash);font-size:.42em;letter-spacing:.14em;padding:.18em 0 .12em}
+.beam{height:3px;background:var(--ember);margin-top:26px;transform-origin:left;animation:sweep .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes sweep{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.lede{max-width:46ch;margin:26px 0 0;font-size:clamp(17px,2.1vw,21px);color:#C9C6C0}
+.lede strong{color:var(--bone);font-weight:600}
+.facts{display:flex;flex-wrap:wrap;margin-top:38px;border-top:1px solid var(--rule)}
+.fact{flex:1 1 190px;padding:16px 18px 16px 0;border-right:1px solid var(--rule);font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+.fact:last-child{border-right:0}
+.fact b{display:block;font-family:var(--display);font-size:15px;letter-spacing:0;text-transform:none;color:var(--bone);font-weight:600;margin-top:4px}
+
+/* sections */
+section{padding:clamp(50px,8vw,92px) 0;border-top:1px solid var(--rule)}
+.shead{display:flex;align-items:baseline;gap:16px;margin-bottom:8px;flex-wrap:wrap}
+.shead h2{margin:0;font-size:clamp(24px,3.4vw,34px);font-weight:800;font-variation-settings:'wdth' 106,'wght' 800;letter-spacing:-.01em;text-transform:uppercase}
+.shead .tag{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--ember);text-transform:uppercase}
+.sub{color:var(--ash);max-width:58ch;margin:0 0 34px;font-size:15px}
+
+/* flagship */
+.flag{border:1px solid var(--rule);background:linear-gradient(180deg,var(--graphite),rgba(19,20,24,.35))}
+.flag-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;padding:14px 22px;border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash)}
+.flag-top .go{color:var(--ember)}
+.flag-body{padding:30px 22px 34px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,52px)}
+@media(max-width:800px){.flag-body{grid-template-columns:1fr;padding-bottom:28px}}
+.flag h3{margin:0;font-size:clamp(30px,5.5vw,52px);line-height:.95;font-weight:900;font-variation-settings:'wdth' 116,'wght' 900;text-transform:uppercase;letter-spacing:-.01em}
+.flag h3 em{font-style:normal;color:var(--ember)}
+.flag .say{margin:16px 0 0;font-size:16.5px;color:#C9C6C0;max-width:46ch}
+.loop{list-style:none;margin:24px 0 0;padding:0;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ash)}
+.loop li{padding:9px 0;border-bottom:1px solid var(--rule);display:flex;gap:12px}
+.loop li:first-child{border-top:1px solid var(--rule)}
+.loop b{color:var(--gold);font-weight:500;min-width:22px}
+.loop span{color:#C9C6C0}
+.cta{display:inline-block;margin-top:26px;background:var(--ember);color:#fff;text-decoration:none;padding:13px 26px;font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;transition:filter .2s}
+.cta:hover{filter:brightness(1.14)}
+
+/* countdown */
+.clock{align-self:start;border:1px solid var(--rule);padding:20px 20px 22px;background:rgba(11,11,13,.5)}
+.clock .lab{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ash)}
+.clock .where{font-size:15px;font-weight:600;margin-top:6px}
+.clock .digits{display:flex;gap:18px;margin-top:18px}
+.clock .u{font-family:var(--mono)}
+.clock .u b{display:block;font-size:clamp(26px,4.4vw,36px);font-weight:700;line-height:1}
+.clock .u i{font-style:normal;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash);display:block;margin-top:7px}
+.clock .go-live{margin-top:16px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ember)}
+
+/* feature grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.grid>div{background:var(--carbon);padding:24px 22px 28px}
+.grid .n{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--ember);text-transform:uppercase}
+.grid h3{margin:13px 0 8px;font-size:18px;font-weight:700;font-variation-settings:'wdth' 104,'wght' 700}
+.grid p{margin:0;color:var(--ash);font-size:14.5px}
+
+/* rules */
+.rules{border-top:1px solid var(--rule)}
+.rule{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.rule dt{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.rule dd{margin:0;color:#C9C6C0;font-size:15.5px}
+@media(max-width:640px){.rule{grid-template-columns:1fr;gap:6px}}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr minmax(0,420px);gap:clamp(28px,5vw,64px);align-items:start}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+.contact-copy p{color:var(--ash);max-width:40ch}
+.mailto{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:14px;text-decoration:none;border-bottom:2px solid var(--ember);padding-bottom:3px}
+.mailto:hover{color:var(--ember)}
+label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash);margin:0 0 7px}
+input,textarea{width:100%;background:var(--graphite);border:1px solid var(--rule);color:var(--bone);font-family:var(--display);font-size:15px;padding:12px 13px;border-radius:0;transition:border-color .2s}
+input:focus,textarea:focus{outline:none;border-color:var(--ember)}
+.field{margin-bottom:18px}
+textarea{min-height:112px;resize:vertical}
+button{width:100%;background:var(--ember);color:#fff;border:0;padding:14px;cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;transition:filter .2s}
+button:hover{filter:brightness(1.12)}
+button:disabled{opacity:.55;cursor:default}
+.status{margin-top:12px;font-family:var(--mono);font-size:12px;color:var(--gold);min-height:18px}
+
+footer{border-top:1px solid var(--rule);padding:26px 0 40px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#5F6169}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--bone)}
+
+@media (prefers-reduced-motion: reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+</style>
+</head>
+<body>
+<div class="strip"></div>
+
+<div class="wrap">
+  <nav>
+    <div class="mark">CURATORS OF SPEED <b>LLC</b></div>
+    <div class="nav-links">
+      <a href="#hunt">The app</a>
+      <a href="#inside">Inside</a>
+      <a href="#team">Team</a>
+      <a class="on" href="https://tyrehunt.app">Play →</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <header class="hero wrap">
+    <div class="eyebrow"><i></i> Washington LLC · Makers of Tyre Hunt · Est. 2026</div>
+    <h1><span>Curators</span><span class="of">of</span><span>Speed</span></h1>
+    <div class="beam"></div>
+    <p class="lede">A small team of gearheads building one thing: <strong>Tyre Hunt</strong> — the camera-first car spotting game. Find it in the wild, shoot it, keep it forever.</p>
+
+    <div class="facts">
+      <div class="fact">Building<b>Tyre Hunt</b></div>
+      <div class="fact">Launch<b>Monterey Car Week 2026</b></div>
+      <div class="fact">Price<b>Free to play</b></div>
+    </div>
+  </header>
+
+  <section id="hunt" class="wrap">
+    <div class="shead"><h2>The app</h2><span class="tag">Launching</span></div>
+    <p class="sub">Point your phone at real metal in the wild and it earns you a permanent record of the car. That's the whole game.</p>
+
+    <div class="flag">
+      <div class="flag-top">
+        <span>Tyre Hunt · Progressive web app · iOS &amp; Android</span>
+        <span class="go">Free to play</span>
+      </div>
+      <div class="flag-body">
+        <div>
+          <h3>Spot it. <em>Own the shot.</em></h3>
+          <p class="say">No back-catalog imports. No photos of photos. Only cars you find yourself, shot live, count toward your Registry.</p>
+          <ul class="loop">
+            <li><b>01</b><span>Shoot the car where you find it — camera only, no uploads.</span></li>
+            <li><b>02</b><span>It gets named, graded for rarity, and filed to your Registry.</span></li>
+            <li><b>03</b><span>Build streaks, chase bounties, climb the board against other hunters.</span></li>
+          </ul>
+          <a class="cta" href="https://tyrehunt.app">Open Tyre Hunt</a>
+        </div>
+
+        <aside class="clock" id="clock">
+          <div class="lab">Launch</div>
+          <div class="where">Monterey Car Week, California</div>
+          <div class="digits" id="digits">
+            <div class="u"><b data-d>--</b><i>Days</i></div>
+            <div class="u"><b data-h>--</b><i>Hours</i></div>
+            <div class="u"><b data-m>--</b><i>Min</i></div>
+          </div>
+          <div class="go-live" id="golive" hidden>● Live now — go hunting</div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="inside" class="wrap">
+    <div class="shead"><h2>Inside the hunt</h2><span class="tag">Features</span></div>
+    <p class="sub">Built for the way car people already behave — at shows, in parking lots, on the road.</p>
+
+    <div class="grid">
+      <div>
+        <div class="n">Collect</div>
+        <h3>Your Registry</h3>
+        <p>Every verified spot files itself under the right model. The collection is the score — no currency, no pay-to-win.</p>
+      </div>
+      <div>
+        <div class="n">Grade</div>
+        <h3>Full Dossier</h3>
+        <p>Five graded angles on one car for a complete record. Rare metal is worth walking around for.</p>
+      </div>
+      <div>
+        <div class="n">Chase</div>
+        <h3>Bounties &amp; Most Wanted</h3>
+        <p>Owners put their car up as a bounty. Hunters go find it. Everyone wins something.</p>
+      </div>
+      <div>
+        <div class="n">Gather</div>
+        <h3>Scheduled hunts</h3>
+        <p>Post a hunt, everyone RSVPs, and the lobby opens when it starts. Shows, meets, cars and coffee.</p>
+      </div>
+      <div>
+        <div class="n">Compete</div>
+        <h3>Crews &amp; the board</h3>
+        <p>Ranks, titles, streaks and a live leaderboard across the Registry, legends and streak tables.</p>
+      </div>
+      <div>
+        <div class="n">Share</div>
+        <h3>Reels &amp; share cards</h3>
+        <p>Every spot exports as a vertical reel or card, ready to post without leaving the app.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="rules" class="wrap">
+    <div class="shead"><h2>House rules</h2><span class="tag">Fair play</span></div>
+    <p class="sub">A spotting game only works if the spots are real. These are non-negotiable.</p>
+    <dl class="rules">
+      <div class="rule"><dt>Live captures</dt><dd>The camera is the only way in. Nothing from the camera roll, ever.</dd></div>
+      <div class="rule"><dt>Real metal</dt><dd>Screens, prints and posters get caught and don't count.</dd></div>
+      <div class="rule"><dt>No duplicates</dt><dd>The same shot can't be filed twice, by you or anyone else.</dd></div>
+      <div class="rule"><dt>Owner's call</dt><dd>Bounties are owner-declared. We don't publish where anyone's car lives.</dd></div>
+    </dl>
+  </section>
+
+  <section id="team" class="wrap">
+    <div class="shead"><h2>Who's building it</h2><span class="tag">Team</span></div>
+    <p class="sub">Curators of Speed LLC is a small team of gearheads. We built the app we wanted at the last show we went to.</p>
+    <div class="grid">
+      <div>
+        <div class="n">Field first</div>
+        <h3>Tested where it's used</h3>
+        <p>Every feature gets run in a paddock or a parking lot before it ships, not just on a desk.</p>
+      </div>
+      <div>
+        <div class="n">Lean</div>
+        <h3>Fast on bad show Wi-Fi</h3>
+        <p>No bloat, no heavy framework tax. It loads at the event, which is the only place that counts.</p>
+      </div>
+      <div>
+        <div class="n">Close by</div>
+        <h3>You reach actual people</h3>
+        <p>Support goes to the people who wrote the code. Tell us what's broken and it gets fixed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="wrap">
+    <div class="contact-grid">
+      <div class="contact-copy">
+        <div class="shead"><h2>Get in touch</h2><span class="tag">Contact</span></div>
+        <p>Press, event access, partnerships, or a bug worth telling us about.</p>
+        <a class="mailto" href="mailto:hello@curatorsofspeed.com">hello@curatorsofspeed.com</a>
+      </div>
+
+      <form id="contact-form">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New enquiry — curatorsofspeed.com">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="message">What's this about</label><textarea id="message" name="message" required></textarea></div>
+        <button type="submit">Send message</button>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="foot">
+    <span>© 2026 Curators of Speed LLC</span>
+    <span><a href="https://tyrehunt.app/privacy.html">Privacy</a> · <a href="https://tyrehunt.app/terms.html">Terms</a> · <a href="https://tyrehunt.app">tyrehunt.app</a></span>
+  </div>
+</footer>
+
+<script>
+// Launch clock — Monterey Car Week, Aug 16 2026 (Pacific)
+(function(){
+  var target = new Date('2026-08-16T08:00:00-07:00').getTime();
+  var digits = document.getElementById('digits'), live = document.getElementById('golive');
+  var d = digits.querySelector('[data-d]'), h = digits.querySelector('[data-h]'), m = digits.querySelector('[data-m]');
+  function pad(n){return String(n).padStart(2,'0')}
+  function tick(){
+    var left = target - Date.now();
+    if(left <= 0){ digits.hidden = true; live.hidden = false; return; }
+    d.textContent = pad(Math.floor(left/864e5));
+    h.textContent = pad(Math.floor(left/36e5)%24);
+    m.textContent = pad(Math.floor(left/6e4)%60);
+  }
+  tick(); setInterval(tick, 30000);
+})();
+
+document.getElementById('contact-form').addEventListener('submit', async function(e){
+  e.preventDefault();
+  var form = e.target, btn = form.querySelector('button'), status = document.getElementById('status');
+  btn.disabled = true; btn.textContent = 'Sending…'; status.textContent = '';
+  try{
+    var res = await fetch('https://api.web3forms.com/submit', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(Object.fromEntries(new FormData(form)))
+    });
+    var data = await res.json();
+    if(data.success){
+      form.reset(); status.textContent = 'Sent. You\'ll hear back within a day.'; btn.textContent = 'Sent';
+    } else {
+      status.textContent = 'That didn\'t send. Email hello@curatorsofspeed.com instead.';
+      btn.disabled = false; btn.textContent = 'Send message';
+    }
+  }catch(err){
+    status.textContent = 'That didn\'t send. Email hello@curatorsofspeed.com instead.';
+    btn.disabled = false; btn.textContent = 'Send message';
+  }
+});
+</script>
+</body>
+</html>
